@@ -15,9 +15,8 @@ const tasks = [
 ];
 
 function TaskVisual({ task }: { task: string }) {
-  if (task === "counter") return <figure className="task-visual"><Image src="/images/animal-restaurant-anomaly.png" alt="Clearly anomalous animal customer with glowing eyes and a distorted mouth" width={767} height={432} /><figcaption><b>Concrete mismatch</b><span>Extreme facial distortion is visible before service.</span></figcaption></figure>;
-  if (task === "kitchen") return <figure className="task-visual"><Image src="/images/animal-restaurant-table.png" alt="Two normal rabbits beside a visibly anomalous mouse at a dining table" width={767} height={432} /><figcaption><b>Inspect the whole table</b><span>A safe-looking group can contain one abnormal customer.</span></figcaption></figure>;
-  if (task === "drive") return <figure className="task-visual"><Image src="/images/animal-restaurant-drive-thru.png" alt="A normal animal customer receiving food at the restaurant drive-thru" width={767} height={432} /><figcaption><b>Second queue</b><span>The drive-thru adds another inspection and delivery point.</span></figcaption></figure>;
+  if (task === "counter") return <figure className="task-visual"><Image src="/images/animal-restaurant-anomaly.png" alt="Clearly anomalous animal customer with glowing eyes and a distorted mouth" width={767} height={432} unoptimized /><figcaption><b>Concrete mismatch</b><span>Extreme facial distortion is visible before service.</span></figcaption></figure>;
+  if (task === "drive") return <figure className="task-visual"><Image src="/images/animal-restaurant-drive-thru.png" alt="A normal animal customer receiving food at the restaurant drive-thru" width={767} height={432} unoptimized /><figcaption><b>Second queue</b><span>The drive-thru adds another inspection and delivery point.</span></figcaption></figure>;
   return null;
 }
 

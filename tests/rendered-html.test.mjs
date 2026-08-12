@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { access } from "node:fs/promises";
 
 async function render(path = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -57,4 +58,14 @@ test("SEO endpoints render", async () => {
   const xml = await sitemap.text();
   assert.match(xml, /https:\/\/animalrestaurantanomaly\.wiki\/beginner-guide/);
   assert.doesNotMatch(xml, /localhost|codex-preview|roblox_game/);
+});
+
+test("static deployment uses public image files", async () => {
+  for (const path of ["/", "/beginner-guide", "/anomalies"]) {
+    const html = await (await render(path)).text();
+    assert.doesNotMatch(html, /\/_next\/image\?/);
+    for (const match of html.matchAll(/<img[^>]+src="(\/images\/[^"]+)"/g)) {
+      await access(new URL(`../public${match[1]}`, import.meta.url));
+    }
+  }
 });

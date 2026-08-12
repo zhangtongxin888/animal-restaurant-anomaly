@@ -65,7 +65,7 @@ export function PageHero({ eyebrow, title, intro, image, alt, step }: { eyebrow:
           <span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p>
           <div className="page-hero-status"><span>●</span> CURRENT GUIDE · VERIFIED AUG 12, 2026</div>
         </div>
-        {image && <div className="page-hero-photo"><Image src={image} alt={alt ?? ""} width={768} height={480} priority /><span>SHIFT EVIDENCE</span></div>}
+        {image && <div className="page-hero-photo"><Image src={image} alt={alt ?? ""} width={768} height={480} priority unoptimized /><span>SHIFT EVIDENCE</span></div>}
       </div>
     </section>
   );

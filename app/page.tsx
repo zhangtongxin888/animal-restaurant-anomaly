@@ -46,7 +46,7 @@ export default function Home() {
           <div className="hero-console">
             <div className="console-top"><span>CAM 02 · DINING ROOM</span><span className="rec"><i /> REC</span></div>
             <div className="console-frame">
-              <Image src="/images/animal-restaurant-table.png" alt="Two normal rabbit customers beside a visibly anomalous mouse at a restaurant table" width={768} height={432} priority />
+              <Image src="/images/animal-restaurant-table.png" alt="Two normal rabbit customers beside a visibly anomalous mouse at a restaurant table" width={768} height={432} priority unoptimized />
               <div className="target target-a"><span>CHECK</span></div><div className="target target-b"><span>BASELINE</span></div>
               <div className="scan-sweep" />
             </div>
@@ -76,7 +76,7 @@ export default function Home() {
 
       <section className="evidence-section">
         <div className="shell evidence-grid">
-          <div className="evidence-photo"><div><span>FIELD NOTE 02</span><span>DINING ROOM CHECK</span></div><Image src="/images/animal-restaurant-counter.png" alt="An anomalous cat customer seated with a plate in the restaurant dining room" width={768} height={432} /><small>Visible facial distortion is a strong early clue.</small></div>
+          <div className="evidence-photo"><div><span>FIELD NOTE 02</span><span>DINING ROOM CHECK</span></div><Image src="/images/animal-restaurant-counter.png" alt="An anomalous cat customer seated with a plate in the restaurant dining room" width={768} height={432} unoptimized /><small>Visible facial distortion is a strong early clue.</small></div>
           <div className="evidence-copy"><span className="eyebrow">03 · Anomaly check</span><h2>Use a comparison.<br />Not a hunch.</h2><p>Current guides show obvious visual breaks such as glitched faces and stretched heads. In the documented guide version, a country label is normal. When the game updates, a repeatable comparison lasts longer than a memorized gallery.</p><ul><li><b>Face</b><span>Do the eyes and mouth match the normal model?</span></li><li><b>Head</b><span>Is the silhouette unnaturally stretched or distorted?</span></li><li><b>Group</b><span>Did you inspect every customer, not only the first?</span></li></ul><Link className="button button-dark" href="/anomalies">Study the anomaly field guide <b>→</b></Link></div>
         </div>
       </section>
