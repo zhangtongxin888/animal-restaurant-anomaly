@@ -13,7 +13,7 @@ test("home leads with beginner retention content", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Your first shift/);
+  assert.match(html, /New player\? Do this next/);
   assert.match(html, /first shift/i);
   assert.match(html, /Four moves\. One safe loop\./);
   assert.match(html, /Core gameplay loop/);
@@ -21,7 +21,17 @@ test("home leads with beginner retention content", async () => {
   assert.match(html, /Before the bell rings/i);
   assert.match(html, /href="\/beginner-guide"[^>]*>[^<]*(?:<[^>]+>[^<]*<\/[^>]+>)*Start the first-shift tutorial/i);
   assert.doesNotMatch(html, /class="[^"]*(?:button-primary|header-cta)[^"]*"[^>]*href="https:\/\/www\.roblox\.com/i);
+  assert.match(html, /mobile-tutorial-cta/);
+  assert.match(html, /New here\?/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
+});
+
+test("all public pages keep the beginner tutorial one tap away", async () => {
+  for (const path of ["/", "/beginner-guide", "/anomalies", "/upgrades", "/faq", "/sources"]) {
+    const html = await (await render(path)).text();
+    assert.match(html, /mobile-tutorial-cta/, path);
+    assert.match(html, /Follow shift one/, path);
+  }
 });
 
 test("guide routes render and internally connect", async () => {

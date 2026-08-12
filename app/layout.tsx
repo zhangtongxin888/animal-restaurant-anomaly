@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   icons: { icon: "/images/animal-restaurant-icon.png", apple: "/images/animal-restaurant-icon.png" },
   openGraph: { title, description, type: "website", url: "/", siteName: "Animal Restaurant Anomaly Guide", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Animal Restaurant Anomaly beginner shift guide" }] },
   twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  robots: { index: true, follow: true },
+  category: "games",
 };
 
 export const viewport: Viewport = { themeColor: "#151815", colorScheme: "light" };

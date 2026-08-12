@@ -7,6 +7,13 @@ export const learningPath = [
   { href: "/upgrades", number: "03", label: "Plan your upgrades", meta: "Progression" },
 ];
 
+export const guideLinks = [
+  { href: "/beginner-guide", label: "First shift" },
+  { href: "/anomalies", label: "Field guide" },
+  { href: "/upgrades", label: "Progression" },
+  { href: "/faq", label: "FAQ" },
+];
+
 export function Header() {
   return (
     <header className="site-header">
@@ -16,14 +23,11 @@ export function Header() {
           <span><strong>ANIMAL RESTAURANT</strong><small>ANOMALY SHIFT MANUAL</small></span>
         </Link>
         <nav aria-label="Main navigation">
-          <Link href="/beginner-guide">First shift</Link>
-          <Link href="/anomalies">Field guide</Link>
-          <Link href="/upgrades">Progression</Link>
-          <Link href="/faq">FAQ</Link>
+          {guideLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open guide navigation">Guide <span>+</span></summary>
-          <div><Link href="/beginner-guide">01 · First shift</Link><Link href="/anomalies">02 · Field guide</Link><Link href="/upgrades">03 · Progression</Link><Link href="/faq">04 · FAQ</Link></div>
+          <div>{guideLinks.map((item, index) => <Link href={item.href} key={item.href}>0{index + 1} · {item.label}</Link>)}</div>
         </details>
         <Link className="header-cta" href="/beginner-guide"><span>01</span> Start the tutorial <b>→</b></Link>
       </div>
@@ -53,7 +57,11 @@ export function SectionHeading({ kicker, title, text, light = false }: { kicker:
 }
 
 export function GuideShell({ children }: { children: React.ReactNode }) {
-  return <><a className="skip-link" href="#main-content">Skip to guide content</a><Header /><main id="main-content">{children}</main><Footer /></>;
+  return <><a className="skip-link" href="#main-content">Skip to guide content</a><Header /><main id="main-content">{children}</main><MobileTutorialCta /><Footer /></>;
+}
+
+export function MobileTutorialCta() {
+  return <Link className="mobile-tutorial-cta" href="/beginner-guide"><span><b>New here?</b> Follow shift one</span><i>Start →</i></Link>;
 }
 
 export function PageHero({ eyebrow, title, intro, image, alt, step }: { eyebrow: string; title: string; intro: string; image?: string; alt?: string; step?: string }) {

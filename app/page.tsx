@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Footer, Header, SectionHeading, learningPath } from "./site-components";
+import { Footer, Header, MobileTutorialCta, SectionHeading, learningPath } from "./site-components";
 
 const quickStart = [
   { number: "01", title: "Inspect", text: "Stop at the counter. Check eyes, mouth, head shape, then every member of the group.", tag: "LOOK FIRST" },
@@ -35,13 +35,13 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span className="live-dot" /> Beginner route · spoiler-light</div>
-            <h1>Your first shift,<br /><em>under control.</em></h1>
-            <p className="hero-lede">A practical survival manual for <strong>Animal Restaurant (Anomaly)</strong>. Learn the repeatable inspect → decide → cook → deliver loop before the restaurant gets busy.</p>
+            <h1>Before you serve,<br /><em>check the face.</em></h1>
+            <p className="hero-lede"><strong>New player? Do this next:</strong> open the first-shift tutorial, learn the face check, then run one order at a time. The full inspect → decide → cook → deliver loop is mapped below.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/beginner-guide"><span className="button-no">01</span><span>Start the first-shift tutorial<small>Step by step · about 8 minutes</small></span><b>→</b></Link>
               <Link className="button button-quiet" href="/anomalies">Open the anomaly field guide</Link>
             </div>
-            <div className="hero-trust"><span>✓ FACT-CHECKED</span><span>✓ NO GUESSED CODES</span><span>✓ UPDATE-AWARE</span></div>
+            <div className="hero-trust"><span>✓ FACT-CHECKED</span><span>✓ SPOILER-LIGHT</span><span>✓ UPDATE-AWARE</span></div>
           </div>
           <div className="hero-console">
             <div className="console-top"><span>CAM 02 · DINING ROOM</span><span className="rec"><i /> REC</span></div>
@@ -54,7 +54,7 @@ export default function Home() {
             <div className="console-note"><span>FIRST RULE</span><strong>Look before you cook.</strong></div>
           </div>
         </div>
-        <div className="hero-strip shell"><span>SHIFT 01</span><b>COUNTER</b><i /> <b>KITCHEN</b><i /> <b>DINING ROOM</b><i /> <b>RESET</b><small>YOUR FIRST 10 MINUTES</small></div>
+        <div className="hero-strip shell"><span>SHIFT 01</span><b>1 · INSPECT</b><i /> <b>2 · DECIDE</b><i /> <b>3 · COOK</b><i /> <b>4 · DELIVER</b><small>YOUR FIRST SAFE LOOP</small></div>
       </section>
 
       <section className="start-section" id="quick-start">
@@ -94,6 +94,7 @@ export default function Home() {
 
       <section className="final-cta"><div className="shell"><span>READY FOR SHIFT ONE?</span><h2>Inspect first.<br />Serve second.</h2><p>Follow the full tutorial once. Then keep the field guide open for your next run.</p><Link className="button button-paper" href="/beginner-guide"><span className="button-no">01</span>Start the first-shift tutorial <b>→</b></Link></div></section>
       </main>
+      <MobileTutorialCta />
       <Footer />
     </>
   );
