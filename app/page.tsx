@@ -19,10 +19,10 @@ const mistakes = [
 const faqs = [
   ["What counts as an anomaly?", "Verified footage shows visibly glitched faces and stretched or distorted heads. Compare the whole model with normal customers you already know."],
   ["How do I reject a counter guest?", "Ring the counter bell twice. At the drive-thru, use the shutter control."],
-  ["Is the country label suspicious?", "In the currently documented version, the country label is a normal display. The label alone is not enough reason to reject a customer."],
+  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of September 23, 2026. See the Codes status page for checked surfaces and safe redeem steps."],
 ];
 
-const websiteJsonLd = { "@context": "https://schema.org", "@type": "WebSite", name: "Animal Restaurant Anomaly Guide", url: "https://animalrestaurantanomaly.wiki", description: "A verified first-shift guide to Animal Restaurant (Anomaly), with anomaly checks, progression, common mistakes, and FAQs." };
+const websiteJsonLd = { "@context": "https://schema.org", "@type": "WebSite", name: "Animal Restaurant Anomaly Guide", url: "https://animalrestaurantanomaly.wiki", description: "A verified first-shift Roblox guide to Animal Restaurant (Anomaly) by Dine N' Dash, with anomaly checks, progression, codes status, and FAQs." };
 
 export default function Home() {
   return (
@@ -35,11 +35,12 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span className="live-dot" /> Beginner route · spoiler-light</div>
-            <h1>Before you serve,<br /><em>check the face.</em></h1>
-            <p className="hero-lede"><strong>New player? Do this next:</strong> open the first-shift tutorial, learn the face check, then run one order at a time. The full inspect → decide → cook → deliver loop is mapped below.</p>
+            <h1>Animal Restaurant Anomaly on Roblox.<br /><em>Check the face before you serve.</em></h1>
+            <p className="hero-lede"><strong>New player? Do this next:</strong> open the first-shift tutorial, learn the face check, then run one order at a time. This is the independent Roblox guide for Animal Restaurant (Anomaly) by Dine N&apos; Dash—not the mobile restaurant game.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/beginner-guide"><span className="button-no">01</span><span>Start the first-shift tutorial<small>Step by step · about 8 minutes</small></span><b>→</b></Link>
               <Link className="button button-quiet" href="/anomalies">Open the anomaly field guide</Link>
+              <Link className="button button-quiet" href="/codes">Codes status (no working codes yet)</Link>
             </div>
             <div className="hero-trust"><span>✓ FACT-CHECKED</span><span>✓ SPOILER-LIGHT</span><span>✓ UPDATE-AWARE</span></div>
           </div>
@@ -83,7 +84,7 @@ export default function Home() {
 
       <section className="route-section" id="route">
         <div className="shell route-grid">
-          <div><SectionHeading kicker="04 · Progression" title="Your next three shifts" text="Build accuracy, then rhythm, then speed. Upgrades help only when they support a loop you can already run." /><div className="shift-stack"><div><span>SHIFT 01</span><b>Accuracy</b><small>Learn normal faces. Finish clean.</small></div><div><span>SHIFT 02</span><b>Rhythm</b><small>Check both queues on every pass.</small></div><div><span>SHIFT 03+</span><b>Efficiency</b><small>Shorten cooking and handling time.</small></div></div><Link className="underlined-link dark-link" href="/upgrades">Plan the upgrade route →</Link></div>
+          <div><SectionHeading kicker="04 · Progression" title="Your next three shifts" text="Build accuracy, then rhythm, then speed. Upgrades help only when they support a loop you can already run." /><div className="shift-stack"><div><span>SHIFT 01</span><b>Accuracy</b><small>Learn normal faces. Finish clean.</small></div><div><span>SHIFT 02</span><b>Rhythm</b><small>Check both queues on every pass.</small></div><div><span>SHIFT 03+</span><b>Efficiency</b><small>Shorten cooking and handling time.</small></div></div><Link className="underlined-link dark-link" href="/upgrades">Plan the upgrade route →</Link><Link className="underlined-link dark-link" href="/codes">Check codes status →</Link></div>
           <aside className="learning-card"><span>YOUR LEARNING PATH</span>{learningPath.map((item)=><Link href={item.href} key={item.href}><b>{item.number}</b><p>{item.label}<small>{item.meta}</small></p><i>→</i></Link>)}<div><strong>PROGRESS PRINCIPLE</strong><p>Batch movement, never the inspection.</p></div></aside>
         </div>
       </section>

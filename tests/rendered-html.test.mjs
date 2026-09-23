@@ -27,7 +27,7 @@ test("home leads with beginner retention content", async () => {
 });
 
 test("all public pages keep the beginner tutorial one tap away", async () => {
-  for (const path of ["/", "/beginner-guide", "/anomalies", "/upgrades", "/faq", "/sources"]) {
+  for (const path of ["/", "/beginner-guide", "/anomalies", "/upgrades", "/codes", "/faq", "/sources"]) {
     const html = await (await render(path)).text();
     assert.match(html, /mobile-tutorial-cta/, path);
     assert.match(html, /Follow shift one/, path);
@@ -35,7 +35,7 @@ test("all public pages keep the beginner tutorial one tap away", async () => {
 });
 
 test("guide routes render and internally connect", async () => {
-  for (const path of ["/beginner-guide", "/anomalies", "/upgrades", "/faq", "/sources"]) {
+  for (const path of ["/beginner-guide", "/anomalies", "/upgrades", "/codes", "/faq", "/sources"]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
     const html = await response.text();
@@ -50,7 +50,7 @@ test("beginner guide is a task-based walkthrough", async () => {
   const response = await render("/beginner-guide");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Your shift, task by task/i);
+  assert.match(html, /beginner walkthrough: your first shift, step by step/i);
   assert.match(html, /FIRST-SHIFT OBJECTIVE/);
   assert.match(html, />GOAL</);
   assert.match(html, />AVOID</);
@@ -78,4 +78,20 @@ test("static deployment uses public image files", async () => {
       await access(new URL(`../public${match[1]}`, import.meta.url));
     }
   }
+});
+
+test("codes status page owns no-verified-codes answer", async () => {
+  const response = await render("/codes");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /No verified public codes as of September 23, 2026/);
+  assert.match(html, /There is no confirmed working Animal Restaurant \(Anomaly\) Roblox code/);
+  assert.match(html, /mobile Animal Restaurant/i);
+  assert.match(html, new RegExp(`<link rel="canonical" href="https://animalrestaurantanomaly\\.wiki/codes"`));
+});
+
+test("homepage states Roblox identity and codes handoff", async () => {
+  const html = await (await render()).text();
+  assert.match(html, /Animal Restaurant Anomaly on Roblox/i);
+  assert.match(html, /href="\/codes"/);
 });

@@ -12,6 +12,7 @@ const routes = [
   ["/beginner-guide", "beginner-guide.html", "text/html"],
   ["/anomalies", "anomalies.html", "text/html"],
   ["/upgrades", "upgrades.html", "text/html"],
+  ["/codes", "codes.html", "text/html"],
   ["/faq", "faq.html", "text/html"],
   ["/sources", "sources.html", "text/html"],
   ["/robots.txt", "robots.txt", "text/plain"],
