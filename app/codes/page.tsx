@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ContinueRoute, GuideShell, PageHero } from "../site-components";
 
-const CHECKED = "September 23, 2026";
+const CHECKED = "October 11, 2026";
 
 export const metadata: Metadata = {
-  title: { absolute: "Animal Restaurant Anomaly Codes (Sep 2026) — No Working Codes Yet" },
+  title: { absolute: "Animal Restaurant Anomaly Codes (October 2026) — No Working Codes Yet" },
   description:
-    "Current Animal Restaurant (Anomaly) Roblox codes status: no verified working codes as of September 23, 2026. Official-surface checks, safe redeem steps, and why mobile-game codes fail.",
+    "Current Animal Restaurant (Anomaly) Roblox codes status: no verified working codes as of October 11, 2026. Official-surface checks, safe redeem steps, and why mobile-game codes fail.",
   alternates: { canonical: "/codes" },
   keywords: [
     "Animal Restaurant Anomaly codes",
@@ -101,7 +101,8 @@ export default function CodesPage() {
               <ul>
                 <li>Roblox experience listing for Animal Restaurant (Anomaly) (universe 10418505887 / place 85733030843250)</li>
                 <li>Creator group Dine N&apos; Dash public group record</li>
-                <li>Public badge list (no redeem-code badge or reward-code instruction found)</li>
+                <li>Public badge list (28 badges; no redeem-code badge or reward-code instruction found)</li>
+                <li>Independent cross-checks on October 11, 2026: animalrestaurant.wiki and MXBLOX both list no active codes for this exact Roblox game</li>
               </ul>
               <p>
                 <a href="https://www.roblox.com/games/85733030843250/Animal-Restaurant" rel="nofollow">Open the official Roblox listing</a>

@@ -19,8 +19,13 @@ const mistakes = [
 const faqs = [
   ["What counts as an anomaly?", "Verified footage shows visibly glitched faces and stretched or distorted heads. Compare the whole model with normal customers you already know."],
   ["How do I reject a counter guest?", "Ring the counter bell twice. At the drive-thru, use the shutter control."],
-  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of September 23, 2026. See the Codes status page for checked surfaces and safe redeem steps."],
+  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of October 11, 2026. The game has no redeem menu; see the Codes status page for checked surfaces and safe redeem steps."],
+  ["What does the Head Banger anomaly need?", "Coffee. The official Keep Their Head Clear badge is awarded for feeding a Head Banger coffee, so once you recognize a Head Banger, bring it coffee. See the anomaly field guide for the other checks."],
+  ["How many badges are there?", "28 official badges as of October 11, 2026: shift milestones up to 50 shifts, perfect-dish counts up to 500, no-death runs, 3-player team runs, plus Not Tonight and Keep Their Head Clear for anomaly events."],
+  ["Is Animal Restaurant (Anomaly) still updated?", "Yes. The Roblox listing still carries the [UPDATE] tag, was updated again on October 9, 2026, is still marked Alpha, and runs 2X reward weekends."],
 ];
+
+const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
 
 const websiteJsonLd = { "@context": "https://schema.org", "@type": "WebSite", name: "Animal Restaurant Anomaly Guide", url: "https://animalrestaurantanomaly.wiki", description: "A verified first-shift Roblox guide to Animal Restaurant (Anomaly) by Dine N' Dash, with anomaly checks, progression, codes status, and FAQs." };
 
@@ -28,6 +33,7 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }} />
       <a className="skip-link" href="#main-content">Skip to guide content</a>
       <Header />
       <main id="main-content">
@@ -35,7 +41,7 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <div className="eyebrow"><span className="live-dot" /> Beginner route · spoiler-light</div>
-            <h1>Animal Restaurant Anomaly on Roblox.<br /><em>Check the face before you serve.</em></h1>
+            <h1>Animal Restaurant (Anomaly) Roblox guide.<br /><em>Check the face before you serve.</em></h1>
             <p className="hero-lede"><strong>New player? Do this next:</strong> open the first-shift tutorial, learn the face check, then run one order at a time. This is the independent Roblox guide for Animal Restaurant (Anomaly) by Dine N&apos; Dash—not the mobile restaurant game.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/beginner-guide"><span className="button-no">01</span><span>Start the first-shift tutorial<small>Step by step · about 8 minutes</small></span><b>→</b></Link>
@@ -56,6 +62,18 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-strip shell"><span>SHIFT 01</span><b>1 · INSPECT</b><i /> <b>2 · DECIDE</b><i /> <b>3 · COOK</b><i /> <b>4 · DELIVER</b><small>YOUR FIRST SAFE LOOP</small></div>
+      </section>
+
+      <section className="start-section" id="october-update">
+        <div className="shell">
+          <SectionHeading kicker="00 · October 2026 update" title="What changed this month" text="Checked October 11, 2026 against the official Roblox listing, its badge list, and two player-count trackers." />
+          <div className="mistakes-list">
+            <article><span>10/09</span><div><h3>New [UPDATE] build is live</h3><p>The official listing was updated on October 9, 2026 and still carries the [UPDATE] tag and Alpha warning. Dine N&apos; Dash posts no patch notes, so re-read the shift briefing after each update instead of trusting an old anomaly list. <Link href="/anomalies">Open the anomaly field guide →</Link></p></div></article>
+            <article><span>2X</span><div><h3>2X weekends continue</h3><p>Every weekend pays double rewards, so save long multi-shift runs and upgrade shopping for Saturday and Sunday. <Link href="/upgrades">Plan your upgrades →</Link></p></div></article>
+            <article><span>28</span><div><h3>28 badges, no new ones</h3><p>The badge list is unchanged: Not Tonight (save a customer from an anomaly attack) and Keep Their Head Clear (feed a Head Banger coffee) are the two anomaly badges. <Link href="/anomalies#badges">See every badge →</Link></p></div></article>
+            <article><span>0</span><div><h3>Still no codes</h3><p>No redeem menu and no developer-published code exist as of October 11, 2026. Mobile Animal Restaurant codes do not work here. <Link href="/codes">Codes status →</Link></p></div></article>
+          </div>
+        </div>
       </section>
 
       <section className="start-section" id="quick-start">
@@ -91,7 +109,7 @@ export default function Home() {
 
       <section className="mistakes-section" id="mistakes"><div className="shell mistakes-grid"><SectionHeading kicker="05 · Common mistakes" title="Small rushes become failed shifts." text="Most bad runs begin with one avoidable shortcut." /><div className="mistakes-list">{mistakes.map(([title,text],i)=><article key={title}><span>0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
 
-      <section className="faq-section" id="faq"><div className="shell faq-grid"><div><SectionHeading kicker="06 · Quick answers" title="Before the bell rings" text="Clear the three questions that slow down a first run." /><Link className="underlined-link dark-link" href="/faq">Open all verified answers →</Link></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
+      <section className="faq-section" id="faq"><div className="shell faq-grid"><div><SectionHeading kicker="06 · Quick answers" title="Before the bell rings" text="Clear the questions that slow down a first run." /><Link className="underlined-link dark-link" href="/faq">Open all verified answers →</Link></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
 
       <section className="final-cta"><div className="shell"><span>READY FOR SHIFT ONE?</span><h2>Inspect first.<br />Serve second.</h2><p>Follow the full tutorial once. Then keep the field guide open for your next run.</p><Link className="button button-paper" href="/beginner-guide"><span className="button-no">01</span>Start the first-shift tutorial <b>→</b></Link></div></section>
       </main>

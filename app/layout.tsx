@@ -6,8 +6,8 @@ import "./globals.css";
 const display = Barlow_Condensed({ variable: "--font-display", subsets: ["latin"], weight: ["600", "700", "800"] });
 const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-const title = "Animal Restaurant Anomaly Roblox Guide — First Shift Wiki";
-const description = "Animal Restaurant (Anomaly) is a Roblox night-shift restaurant survival game by Dine N Dash. Learn the face check, first-shift loop, and current codes status.";
+const title = "Animal Restaurant Anomaly Wiki (Roblox): Anomalies, Badges & Codes";
+const description = "Animal Restaurant (Anomaly) on Roblox, checked October 11, 2026: how to spot anomalies, the Head Banger coffee fix, all 28 badges, shift tips, and codes status (none yet).";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://animalrestaurantanomaly.wiki"),

@@ -43,7 +43,7 @@ export function Footer() {
         <div>
           <Link href="/" className="brand brand-footer"><span className="brand-mark"><span>AR</span></span><span><strong>ANIMAL RESTAURANT</strong><small>ANOMALY SHIFT MANUAL</small></span></Link>
           <p>A spoiler-light, independent field manual built from the live Roblox listing, official game media, and current gameplay walkthroughs.</p>
-          <span className="verified-stamp">FACT-CHECKED · SEP 23 2026</span>
+          <span className="verified-stamp">FACT-CHECKED · OCT 11 2026</span>
         </div>
         <div><h3>Complete the route</h3>{learningPath.map((item) => <Link href={item.href} key={item.href}><span>{item.number}</span>{item.label}</Link>)}</div>
         <div><h3>Reference desk</h3><Link href="/codes">Codes status</Link><Link href="/faq">Common questions</Link><Link href="/sources">Research & sources</Link><a href="https://www.roblox.com/games/85733030843250/Animal-Restaurant" rel="nofollow">Official game listing</a></div>
@@ -72,7 +72,7 @@ export function PageHero({ eyebrow, title, intro, image, alt, step }: { eyebrow:
         <div className="page-hero-copy">
           <div className="page-hero-index"><span>{step ?? "MANUAL"}</span><i /></div>
           <span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p>
-          <div className="page-hero-status"><span>●</span> CURRENT GUIDE · VERIFIED SEP 23, 2026</div>
+          <div className="page-hero-status"><span>●</span> CURRENT GUIDE · VERIFIED OCT 11, 2026</div>
         </div>
         {image && <div className="page-hero-photo"><Image src={image} alt={alt ?? ""} width={768} height={480} priority unoptimized /><span>SHIFT EVIDENCE</span></div>}
       </div>
