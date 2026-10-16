@@ -63,4 +63,5 @@ test("banner and native stay enabled while popunder and social bar stay off", as
   assert.match(source, /adsterraNative1ScriptUrl: "https:\/\/pl30928376\.effectivecpmnetwork\.com\//);
   assert.match(source, /adsterraEnablePopunder: false/);
   assert.match(source, /adsterraEnableSocialBar: false/);
+  assert.match(source, /adsterraEnableStickyRail: false/);
 });

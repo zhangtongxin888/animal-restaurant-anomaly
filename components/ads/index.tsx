@@ -467,21 +467,41 @@ export function AdsterraToolBottom() {
   );
 }
 
+function hasInContentInventory() {
+  return (
+    hasLeaderboardSlot() ||
+    hasNativeSlot(runtimeConfig.adsterraNative1Id, runtimeConfig.adsterraNative1ScriptUrl) ||
+    hasBannerSlot("300x250")
+  );
+}
+
 /**
- * A conservative portfolio fallback for legacy sites whose page templates
- * have little or no inline inventory. It is wired only by the migration
- * tool when source coverage is below the threshold, and remains clean-route
- * aware even though it lives in the root layout.
+ * Early in-content inventory: responsive leaderboard, one native unit, and a
+ * 300×250. At most three visible slots. Privacy, terms, contact, about,
+ * disclosure, sources, and the other clean routes render nothing.
+ * Popunder, social bar, and the sticky rail are separate gates and stay off
+ * unless their flags are enabled.
  */
-export function AdsterraGlobalFallback() {
+export function AdsterraInContentSlots() {
   const cleanAdRoute = useCleanAdRoute();
-  if (cleanAdRoute || !hasLeaderboardSlot()) return null;
+  if (cleanAdRoute || !hasInContentInventory()) return null;
 
   return (
-    <div className="ad-placement ad-placement-global-fallback">
-      <AdsterraLeaderboard />
+    <div className="ad-placement ad-placement-in-content ad-placement-above-fold shell">
+      <AdsterraArticleTop />
+      <AdsterraArticleMid />
+      <AdsterraArticleBottom />
     </div>
   );
+}
+
+/**
+ * Legacy layout hook. Page templates now mount {@link AdsterraInContentSlots}
+ * after the first content block, so this stays empty and does not fire a
+ * second Banner/Native request from the top of `body`.
+ */
+export function AdsterraGlobalFallback() {
+  return null;
 }
 
 // Backward-compatible placement API used by older generated page templates.

@@ -95,3 +95,36 @@ test("homepage states Roblox identity and codes handoff", async () => {
   assert.match(html, /Animal Restaurant Anomaly on Roblox/i);
   assert.match(html, /href="\/codes"/);
 });
+
+function countMatches(html, needle) {
+  return html.split(needle).length - 1;
+}
+
+test("content pages show three early in-content slots and legal pages stay clean", async () => {
+  const home = await (await render("/")).text();
+  const heroAt = home.indexOf('class="hero"');
+  const slotsAt = home.indexOf("ad-placement-above-fold");
+  const nextAt = home.indexOf('id="october-update"');
+  assert.ok(heroAt !== -1 && slotsAt > heroAt && slotsAt < nextAt, "homepage slots sit after the hero and before the next section");
+  assert.equal(countMatches(home, "ad-placement-top"), 1);
+  assert.equal(countMatches(home, "ad-placement-mid"), 1);
+  assert.equal(countMatches(home, "ad-placement-bottom"), 1);
+  assert.equal(countMatches(home, "ad-placement-global-fallback"), 0);
+  assert.equal(countMatches(home, "ad-sticky-rail"), 0);
+  assert.doesNotMatch(home, /adsterra-popunder|adsterra-social-bar/);
+
+  for (const path of ["/beginner-guide", "/anomalies", "/upgrades", "/codes", "/faq"]) {
+    const html = await (await render(path)).text();
+    const pageHeroAt = html.indexOf('class="page-hero"');
+    const pageSlotsAt = html.indexOf("ad-placement-above-fold");
+    assert.ok(pageHeroAt !== -1 && pageSlotsAt > pageHeroAt, `${path} slots follow the page hero`);
+    assert.equal(countMatches(html, "ad-placement-top"), 1, path);
+    assert.equal(countMatches(html, "ad-placement-mid"), 1, path);
+    assert.equal(countMatches(html, "ad-placement-bottom"), 1, path);
+    assert.equal(countMatches(html, "ad-sticky-rail"), 0, path);
+    assert.doesNotMatch(html, /adsterra-popunder|adsterra-social-bar/);
+  }
+
+  const sources = await (await render("/sources")).text();
+  assert.doesNotMatch(sources, /ad-placement|ad-shell|ad-host|ad-sticky-rail|adsterra-popunder|adsterra-social-bar/);
+});
