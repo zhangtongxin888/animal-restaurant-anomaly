@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AdsterraInContentSlots } from "@/components/ads";
 import { Footer, Header, MobileTutorialCta, SectionHeading, learningPath } from "./site-components";
 
 const quickStart = [
@@ -63,6 +64,8 @@ export default function Home() {
         </div>
         <div className="hero-strip shell"><span>SHIFT 01</span><b>1 · INSPECT</b><i /> <b>2 · DECIDE</b><i /> <b>3 · COOK</b><i /> <b>4 · DELIVER</b><small>YOUR FIRST SAFE LOOP</small></div>
       </section>
+
+      <AdsterraInContentSlots />
 
       <section className="start-section" id="october-update">
         <div className="shell">

@@ -1,4 +1,4 @@
-import { AdsterraPopunderGate, AdsterraSocialBarGate, AdsterraStickyRail, AdsterraGlobalFallback } from "@/components/ads";
+import { AdsterraPopunderGate, AdsterraSocialBarGate, AdsterraStickyRail } from "@/components/ads";
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, DM_Sans } from "next/font/google";
 import "./globals.css";
@@ -29,5 +29,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <AdsterraPopunderGate />
         <AdsterraSocialBarGate />
         <AdsterraStickyRail />
-        <AdsterraGlobalFallback />{children}</body></html>;
+        {children}</body></html>;
 }

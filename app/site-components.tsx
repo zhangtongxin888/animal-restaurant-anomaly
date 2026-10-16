@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AdsterraInContentSlots } from "@/components/ads";
 
 export const learningPath = [
   { href: "/beginner-guide", number: "01", label: "Survive shift one", meta: "8 min read" },
@@ -67,16 +68,19 @@ export function MobileTutorialCta() {
 
 export function PageHero({ eyebrow, title, intro, image, alt, step }: { eyebrow: string; title: string; intro: string; image?: string; alt?: string; step?: string }) {
   return (
-    <section className="page-hero">
-      <div className="shell page-hero-grid">
-        <div className="page-hero-copy">
-          <div className="page-hero-index"><span>{step ?? "MANUAL"}</span><i /></div>
-          <span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p>
-          <div className="page-hero-status"><span>●</span> CURRENT GUIDE · VERIFIED OCT 11, 2026</div>
+    <>
+      <section className="page-hero">
+        <div className="shell page-hero-grid">
+          <div className="page-hero-copy">
+            <div className="page-hero-index"><span>{step ?? "MANUAL"}</span><i /></div>
+            <span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p>
+            <div className="page-hero-status"><span>●</span> CURRENT GUIDE · VERIFIED OCT 11, 2026</div>
+          </div>
+          {image && <div className="page-hero-photo"><Image src={image} alt={alt ?? ""} width={768} height={480} priority unoptimized /><span>SHIFT EVIDENCE</span></div>}
         </div>
-        {image && <div className="page-hero-photo"><Image src={image} alt={alt ?? ""} width={768} height={480} priority unoptimized /><span>SHIFT EVIDENCE</span></div>}
-      </div>
-    </section>
+      </section>
+      <AdsterraInContentSlots />
+    </>
   );
 }
 
