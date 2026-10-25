@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ContinueRoute, GuideShell, PageHero } from "../site-components";
 
-const CHECKED = "October 18, 2026";
+const CHECKED = "October 24, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: "Animal Restaurant Anomaly Codes (October 2026) — No Working Codes Yet" },
   description:
-    "Current Animal Restaurant (Anomaly) Roblox codes status: no verified working codes as of October 18, 2026. Official-surface checks, safe redeem steps, and why mobile-game codes fail.",
+    "Current Animal Restaurant (Anomaly) Roblox codes status: no verified working codes as of October 24, 2026. Official-surface checks, safe redeem steps, and why mobile-game codes fail.",
   alternates: { canonical: "/codes" }, openGraph: { title: "Animal Restaurant Anomaly Codes (October 2026) — No Working Codes Yet", type: "article", url: "/codes", siteName: "Animal Restaurant Anomaly Guide", images: [{ url: "/og.png", width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title: "Animal Restaurant Anomaly Codes (October 2026) — No Working Codes Yet", images: ["/og.png"] },
   keywords: [
     "Animal Restaurant Anomaly codes",
@@ -102,7 +102,7 @@ export default function CodesPage() {
                 <li>Roblox experience listing for Animal Restaurant (Anomaly) (universe 10418505887 / place 85733030843250)</li>
                 <li>Creator group Dine N&apos; Dash public group record</li>
                 <li>Public badge list (28 badges; no redeem-code badge or reward-code instruction found)</li>
-                <li>Independent cross-checks on October 18, 2026: animalrestaurant.wiki and MXBLOX both list no active codes for this exact Roblox game</li>
+                <li>Independent cross-checks on October 24, 2026: animalrestaurant.wiki (rechecked Oct 23) lists no codes and no redeem menu; MXBLOX (Oct 18) lists no active codes for this exact Roblox game</li>
               </ul>
               <p>
                 <a href="https://www.roblox.com/games/85733030843250/Animal-Restaurant" rel="nofollow">Open the official Roblox listing</a>

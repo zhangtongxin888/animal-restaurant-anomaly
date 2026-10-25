@@ -20,10 +20,10 @@ const mistakes = [
 const faqs = [
   ["What counts as an anomaly?", "Verified footage shows visibly glitched faces and stretched or distorted heads. Compare the whole model with normal customers you already know."],
   ["How do I reject a counter guest?", "Ring the counter bell twice. At the drive-thru, use the shutter control."],
-  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of October 18, 2026. The game has no redeem menu; see the Codes status page for checked surfaces and safe redeem steps."],
+  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of October 24, 2026. The game has no redeem menu; see the Codes status page for checked surfaces and safe redeem steps."],
   ["What does the Head Banger anomaly need?", "Coffee. The official Keep Their Head Clear badge is awarded for feeding a Head Banger coffee, so once you recognize a Head Banger, bring it coffee. See the anomaly field guide for the other checks."],
-  ["How many badges are there?", "28 official badges as of October 18, 2026: shift milestones up to 50 shifts, perfect-dish counts up to 500, no-death runs, 3-player team runs, plus Not Tonight and Keep Their Head Clear for anomaly events."],
-  ["Is Animal Restaurant (Anomaly) still updated?", "Yes. The Roblox listing still carries the [UPDATE] tag, was updated again on October 11, 2026, is still marked Alpha, and runs 2X reward weekends."],
+  ["How many badges are there?", "28 official badges as of October 24, 2026: shift milestones up to 50 shifts, perfect-dish counts up to 500, no-death runs, 3-player team runs, plus Not Tonight and Keep Their Head Clear for anomaly events."],
+  ["Is Animal Restaurant (Anomaly) still updated?", "Yes. The Roblox listing still carries the [UPDATE] tag, was updated again on October 20, 2026, is still marked Alpha, and runs 2X reward weekends."],
 ];
 
 const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
@@ -69,12 +69,12 @@ export default function Home() {
 
       <section className="start-section" id="october-update">
         <div className="shell">
-          <SectionHeading kicker="00 · October 2026 update" title="What changed this month" text="Checked October 18, 2026 against the official Roblox listing, its badge list, and two independent code trackers." />
+          <SectionHeading kicker="00 · October 2026 update" title="What changed this month" text="Checked October 24, 2026 against the official Roblox listing, its badge list, and two independent code trackers." />
           <div className="mistakes-list">
-            <article><span>10/11</span><div><h3>New [UPDATE] build is live</h3><p>The official listing was last updated on October 11, 2026 and still carries the [UPDATE] tag and Alpha warning. Dine N&apos; Dash posts no patch notes, so re-read the shift briefing after each update instead of trusting an old anomaly list. <Link href="/anomalies">Open the anomaly field guide →</Link></p></div></article>
+            <article><span>10/20</span><div><h3>New [UPDATE] build is live</h3><p>The official listing was last updated on October 20, 2026 (12:16 UTC; the previous build was October 11) and still carries the [UPDATE] tag and Alpha warning. Dine N&apos; Dash posts no patch notes, so re-read the shift briefing after each update instead of trusting an old anomaly list. <Link href="/anomalies">Open the anomaly field guide →</Link></p></div></article>
             <article><span>2X</span><div><h3>2X weekends continue</h3><p>Every weekend pays double rewards, so save long multi-shift runs and upgrade shopping for Saturday and Sunday. <Link href="/upgrades">Plan your upgrades →</Link></p></div></article>
             <article><span>28</span><div><h3>28 badges, no new ones</h3><p>The badge list is unchanged: Not Tonight (save a customer from an anomaly attack) and Keep Their Head Clear (feed a Head Banger coffee) are the two anomaly badges. <Link href="/anomalies#badges">See every badge →</Link></p></div></article>
-            <article><span>0</span><div><h3>Still no codes</h3><p>No redeem menu and no developer-published code exist as of October 18, 2026. Looking for the manager&apos;s office door code? No code has been published; see <Link href="/anomalies#managers-office">what is known about the office</Link>. Mobile Animal Restaurant codes do not work here. <Link href="/codes">Codes status →</Link></p></div></article>
+            <article><span>0</span><div><h3>Still no codes</h3><p>No redeem menu and no developer-published code exist as of October 24, 2026. Looking for the manager&apos;s office door code? No code has been published; see <Link href="/anomalies#managers-office">what is known about the office</Link>. Mobile Animal Restaurant codes do not work here. <Link href="/codes">Codes status →</Link></p></div></article>
           </div>
         </div>
       </section>
