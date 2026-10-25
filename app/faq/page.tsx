@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ContinueRoute, GuideShell, PageHero } from "../site-components";
 
-export const metadata: Metadata = { title: "FAQ", description: "Answers to common Animal Restaurant (Anomaly) questions about customers, rejection, drive-thru, fires, sanity, and upgrades.", alternates: { canonical: "/faq" } };
+export const metadata: Metadata = { title: "FAQ", description: "Answers to common Animal Restaurant (Anomaly) questions about customers, rejection, drive-thru, fires, sanity, and upgrades.", alternates: { canonical: "/faq" }, openGraph: { title: "Animal Restaurant Anomaly FAQ", description: "Answers to common Animal Restaurant (Anomaly) questions about customers, rejection, drive-thru, fires, sanity, and upgrades.", type: "website", url: "/faq", siteName: "Animal Restaurant Anomaly Guide", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Animal Restaurant Anomaly guide" }] }, twitter: { card: "summary_large_image", title: "Animal Restaurant Anomaly FAQ", description: "Answers to common Animal Restaurant (Anomaly) questions about customers, rejection, drive-thru, fires, sanity, and upgrades.", images: ["/og.png"] } };
 
 const groups = [
   { title: "Basics", entries: [
@@ -22,7 +22,7 @@ const groups = [
   ]},
   { title: "Progression", entries: [
     ["What should I upgrade first?", "Start with the repeated bottleneck that slowed your last shift. If coffee recovery already keeps pace, cooking and order efficiency are usually the more useful early improvements."],
-    ["Are there codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of October 11, 2026. The Codes status page owns the full checked-surface list, redeem steps, and mobile-game boundary."],
+    ["Are there codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of October 24, 2026. The Codes status page owns the full checked-surface list, redeem steps, and mobile-game boundary."],
     ["Will the anomaly list change?", "It can. The official listing marks the game as Alpha, so use the comparison method and review the fact-check date instead of relying on a permanent list."],
   ]},
 ];

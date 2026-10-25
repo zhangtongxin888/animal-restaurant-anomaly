@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://animalrestaurantanomaly.wiki";
-  const lastModified = new Date("2026-10-18");
+  const lastModified = new Date("2026-10-24");
   return [
     { url: `${base}`, lastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/beginner-guide`, lastModified, changeFrequency: "weekly", priority: 0.9 },

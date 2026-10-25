@@ -84,7 +84,7 @@ test("codes status page owns no-verified-codes answer", async () => {
   const response = await render("/codes");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /No verified public codes as of September 23, 2026/);
+  assert.match(html, /No verified public codes as of October 24, 2026/);
   assert.match(html, /There is no confirmed working Animal Restaurant \(Anomaly\) Roblox code/);
   assert.match(html, /mobile Animal Restaurant/i);
   assert.match(html, new RegExp(`<link rel="canonical" href="https://animalrestaurantanomaly\\.wiki/codes"`));
@@ -92,7 +92,7 @@ test("codes status page owns no-verified-codes answer", async () => {
 
 test("homepage states Roblox identity and codes handoff", async () => {
   const html = await (await render()).text();
-  assert.match(html, /Animal Restaurant Anomaly on Roblox/i);
+  assert.match(html, /Animal Restaurant \(Anomaly\) on Roblox/i);
   assert.match(html, /href="\/codes"/);
 });
 

@@ -7,7 +7,7 @@ const display = Barlow_Condensed({ variable: "--font-display", subsets: ["latin"
 const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 const title = "Animal Restaurant Anomaly Wiki (Roblox): Anomalies, Badges & Codes";
-const description = "Animal Restaurant (Anomaly) on Roblox, checked October 18, 2026: how to spot anomalies, the Head Banger coffee fix, all 28 badges, shift tips, and codes status (none yet).";
+const description = "Animal Restaurant (Anomaly) on Roblox, checked October 24, 2026: how to spot anomalies, the Head Banger coffee fix, all 28 badges, shift tips, and codes status (none yet).";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://animalrestaurantanomaly.wiki"),
