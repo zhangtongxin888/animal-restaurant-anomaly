@@ -6,8 +6,8 @@ import "./globals.css";
 const display = Barlow_Condensed({ variable: "--font-display", subsets: ["latin"], weight: ["600", "700", "800"] });
 const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-const title = "Animal Restaurant Anomaly Wiki (Roblox): Anomalies, Badges & Codes";
-const description = "Animal Restaurant (Anomaly) on Roblox, checked October 24, 2026: how to spot anomalies, the Head Banger coffee fix, all 28 badges, shift tips, and codes status (none yet).";
+const title = "Animal Restaurant Anomaly Roblox Guide: Anomalies & Badges";
+const description = "Animal Restaurant Anomaly Roblox guide by Dine N' Dash: spot anomalies, reject them, feed the Head Banger coffee, all 28 badges, codes status. Rechecked Nov 2026.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://animalrestaurantanomaly.wiki"),
