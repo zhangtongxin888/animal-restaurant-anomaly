@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ContinueRoute, GuideShell, PageHero } from "../site-components";
 
-const CHECKED = "November 7, 2026";
+const CHECKED = "17 November 2026";
 
 export const metadata: Metadata = {
   title: { absolute: "Animal Restaurant Anomaly Codes (November 2026) — No Working Codes Yet" },
   description:
-    "Current Animal Restaurant (Anomaly) Roblox codes status: no verified working codes as of November 7, 2026. Official-surface checks, safe redeem steps, and why mobile-game codes fail.",
+    "Current Animal Restaurant (Anomaly) Roblox codes status: no verified working codes as of 17 November 2026. Official-surface checks, safe redeem steps, and why mobile-game codes fail.",
   alternates: { canonical: "/codes" }, openGraph: { title: "Animal Restaurant Anomaly Codes (November 2026) — No Working Codes Yet", type: "article", url: "/codes", siteName: "Animal Restaurant Anomaly Guide", images: [{ url: "/og.png", width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", title: "Animal Restaurant Anomaly Codes (November 2026) — No Working Codes Yet", images: ["/og.png"] },
   keywords: [
     "Animal Restaurant Anomaly codes",
@@ -102,7 +102,7 @@ export default function CodesPage() {
                 <li>Roblox experience listing for Animal Restaurant (Anomaly) (universe 10418505887 / place 85733030843250)</li>
                 <li>Creator group Dine N&apos; Dash public group record</li>
                 <li>Public badge list (28 badges; no redeem-code badge or reward-code instruction found)</li>
-                <li>Independent cross-checks on November 7, 2026: animalrestaurant.wiki (rechecked Oct 31) lists no codes and no published office code; MXBLOX lists no active codes for this exact Roblox game</li>
+                <li>Independent cross-check on 17 November 2026: BloxStatus (last checked 12 November 2026) reported no working codes for Animal Restaurant (Anomaly). Earlier site notes also cited animalrestaurant.wiki (31 October 2026) and MXBLOX as listing no active codes for this exact Roblox game</li>
               </ul>
               <p>
                 <a href="https://www.roblox.com/games/85733030843250/Animal-Restaurant" rel="nofollow">Open the official Roblox listing</a>

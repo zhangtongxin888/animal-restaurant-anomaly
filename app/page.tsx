@@ -20,10 +20,10 @@ const mistakes = [
 const faqs = [
   ["What counts as an anomaly?", "Verified footage shows visibly glitched faces and stretched or distorted heads. Compare the whole model with normal customers you already know."],
   ["How do I reject a counter guest?", "Ring the counter bell twice. At the drive-thru, use the shutter control."],
-  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of November 7, 2026. The game has no redeem menu; see the Codes status page for checked surfaces and safe redeem steps."],
+  ["Are there working Roblox codes?", "No verified public Animal Restaurant (Anomaly) Roblox codes as of 17 November 2026. The official listing still has no redeem text, and BloxStatus (last checked 12 November 2026) also reported no working codes. See the Codes status page for checked surfaces. We did not invent a code."],
   ["What does the Head Banger anomaly need?", "Coffee. The official Keep Their Head Clear badge is awarded for feeding a Head Banger coffee, so once you recognize a Head Banger, bring it coffee. See the anomaly field guide for the other checks."],
-  ["How many badges are there?", "28 official badges as of November 7, 2026: shift milestones up to 50 shifts, perfect-dish counts up to 500, no-death runs, 3-player team runs, plus Not Tonight and Keep Their Head Clear for anomaly events."],
-  ["Is Animal Restaurant (Anomaly) still updated?", "Yes. The Roblox listing still carries the [UPDATE] tag, was updated again on October 20, 2026, is still marked Alpha, and runs 2X reward weekends."],
+  ["How many badges are there?", "This guide still lists 28 official badges from earlier reads of the Roblox badge list: shift milestones up to 50 shifts, perfect-dish counts up to 500, no-death runs, 3-player team runs, plus Not Tonight and Keep Their Head Clear. The official listing was last updated on 20 October 2026, and the 17 November 2026 Games API read showed no later update, so we are not adding new badge or anomaly names."],
+  ["Is Animal Restaurant (Anomaly) still updated?", "The Roblox listing still carried the [UPDATE] tag and Alpha marking when re-read on 17 November 2026, and the Games API updated stamp was still 20 October 2026, 8:16 AM ET. This page does not treat that as a new November build. An earlier site note about 2X reward weekends was not re-verified on 17 November 2026."],
 ];
 
 const faqJsonLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
@@ -43,13 +43,13 @@ export default function Home() {
           <div className="hero-copy">
             <div className="eyebrow"><span className="live-dot" /> Beginner route · spoiler-light</div>
             <h1>Animal Restaurant Anomaly Roblox guide. <br /><em>Check the face before you serve.</em></h1>
-            <p className="hero-lede"><strong>New player? Do this next:</strong> open the first-shift tutorial, learn the face check, then run one order at a time. This is the independent Roblox guide for Animal Restaurant (Anomaly) by Dine N&apos; Dash—not the mobile restaurant game.</p>
+            <p className="hero-lede"><strong>What this game is:</strong> Animal Restaurant (Anomaly) is a Roblox night-shift restaurant game by Dine N&apos; Dash. The official listing, re-read 17 November 2026, says you cook, serve hungry animals, and stay alert because some guests are not what they seem. This independent guide is not the mobile Animal Restaurant game, Animal Hospital, or Anomaly Cafe. Start with the first-shift tutorial, learn the face check, then run one order at a time.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/beginner-guide"><span className="button-no">01</span><span>Start the first-shift tutorial<small>Step by step · about 8 minutes</small></span><b>→</b></Link>
               <Link className="button button-quiet" href="/anomalies">Open the anomaly field guide</Link>
               <Link className="button button-quiet" href="/codes">Codes status (no working codes yet)</Link>
             </div>
-            <div className="hero-trust"><span>✓ FACT-CHECKED</span><span>✓ SPOILER-LIGHT</span><span>✓ UPDATE-AWARE</span></div>
+            <div className="hero-trust"><span>✓ FACT-CHECKED</span><span>✓ SPOILER-LIGHT</span><span>✓ UPDATE-AWARE</span><span>By the Editorial Team · 17 November 2026</span></div>
           </div>
           <div className="hero-console">
             <div className="console-top"><span>CAM 02 · DINING ROOM</span><span className="rec"><i /> REC</span></div>
@@ -69,12 +69,12 @@ export default function Home() {
 
       <section className="start-section" id="october-update">
         <div className="shell">
-          <SectionHeading kicker="00 · Checked November 7, 2026" title="Animal Restaurant Anomaly Roblox: badges and shift basics" text="Rechecked November 7, 2026 against the official Roblox listing, its badge list, and two independent code trackers. The newest build is still October 20, 2026." />
+          <SectionHeading kicker="00 · Rechecked 17 November 2026" title="Animal Restaurant Anomaly Roblox: badges and shift basics" text="Rechecked 17 November 2026 against the official Roblox listing and BloxStatus. The official Games API updated stamp is still 20 October 2026, 8:16 AM ET. No new official anomaly list was published." />
           <div className="mistakes-list">
             <article><span>10/20</span><div><h3>New [UPDATE] build is live</h3><p>The official listing was last updated on October 20, 2026 (12:16 UTC; the previous build was October 11) and still carries the [UPDATE] tag and Alpha warning. Dine N&apos; Dash posts no patch notes, so re-read the shift briefing after each update instead of trusting an old anomaly list. <Link href="/anomalies">Open the anomaly field guide →</Link></p></div></article>
-            <article><span>2X</span><div><h3>2X weekends continue</h3><p>Every weekend pays double rewards, so save long multi-shift runs and upgrade shopping for Saturday and Sunday. <Link href="/upgrades">Plan your upgrades →</Link></p></div></article>
+            <article><span>2X</span><div><h3>2X weekends (earlier site note)</h3><p>An earlier check on this site said weekends pay double rewards. That claim was not re-verified on 17 November 2026, so treat it as dated rather than a fresh official rule. <Link href="/upgrades">Plan your upgrades →</Link></p></div></article>
             <article><span>28</span><div><h3>28 badges, no new ones</h3><p>The badge list is unchanged: Not Tonight (save a customer from an anomaly attack) and Keep Their Head Clear (feed a Head Banger coffee) are the two anomaly badges. <Link href="/anomalies#badges">See every badge →</Link></p></div></article>
-            <article><span>0</span><div><h3>Still no codes</h3><p>No redeem menu and no developer-published code exist as of November 7, 2026. Looking for the manager&apos;s office door code? No code has been published; see <Link href="/anomalies#managers-office">what is known about the office</Link>. Mobile Animal Restaurant codes do not work here. <Link href="/codes">Codes status →</Link></p></div></article>
+            <article><span>0</span><div><h3>Still no codes</h3><p>No redeem text appears in the official listing re-read on 17 November 2026, and BloxStatus (last checked 12 November 2026) also reported no working codes. Looking for the manager&apos;s office door code? No code has been published; see <Link href="/anomalies#managers-office">what is known about the office</Link>. Mobile Animal Restaurant codes do not work here. <Link href="/codes">Codes status →</Link></p></div></article>
           </div>
         </div>
       </section>

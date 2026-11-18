@@ -7,7 +7,7 @@ const display = Barlow_Condensed({ variable: "--font-display", subsets: ["latin"
 const body = DM_Sans({ variable: "--font-body", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 const title = "Animal Restaurant Anomaly Roblox Guide: Anomalies & Badges";
-const description = "Animal Restaurant Anomaly Roblox guide by Dine N' Dash: spot anomalies, reject them, feed the Head Banger coffee, all 28 badges, codes status. Rechecked Nov 2026.";
+const description = "Animal Restaurant Anomaly Roblox guide by Dine N' Dash: spot anomalies, reject them, feed the Head Banger coffee, all 28 badges, codes status. Rechecked 17 November 2026. By the Editorial Team.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://animalrestaurantanomaly.wiki"),

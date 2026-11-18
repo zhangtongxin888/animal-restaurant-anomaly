@@ -13,7 +13,7 @@ test("home leads with beginner retention content", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /New player\? Do this next/);
+  assert.match(html, /What this game is/);
   assert.match(html, /first shift/i);
   assert.match(html, /Four moves\. One safe loop\./);
   assert.match(html, /Core gameplay loop/);
@@ -84,7 +84,7 @@ test("codes status page owns no-verified-codes answer", async () => {
   const response = await render("/codes");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /No verified public codes as of November 7, 2026/);
+  assert.match(html, /No verified public codes as of 17 November 2026/);
   assert.match(html, /There is no confirmed working Animal Restaurant \(Anomaly\) Roblox code/);
   assert.match(html, /mobile Animal Restaurant/i);
   assert.match(html, new RegExp(`<link rel="canonical" href="https://animalrestaurantanomaly\\.wiki/codes"`));
